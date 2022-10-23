@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreShopRowModel" type="com.codewaresapplication.app.modules.exploreshop.data.model.ExploreShopRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowgroup1315"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtGroup1315"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_15pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@{exploreShopRowModel.txtGroup1315}"
+            style="@style/txtSolidRounded" tools:text="@string/lbl_electonics"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtGroup923"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_17pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@{exploreShopRowModel.txtGroup923}"
+            style="@style/txtSolidRounded_1" tools:text="@string/lbl_books"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtGroup924"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_15pxh"
+            android:paddingStart="@dimen/_15pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@{exploreShopRowModel.txtGroup924}"
+            style="@style/txtSolidRounded" tools:text="@string/lbl_reading"/>
+    </LinearLayout>
+</layout>

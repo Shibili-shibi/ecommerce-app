@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chatVM" type="com.codewaresapplication.app.modules.chat.data.viewmodel.ChatVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearChat"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnarrowleft"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarAppbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                    <ImageView android:id="@+id/imageEllipseSixtyFive"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_ellipse65}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse65"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnmahbuba"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtMahbuba"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{chatVM.chatModel.txtMahbuba}"
+                            style="@style/txtPoppinsregular18_1" tools:text="@string/lbl_mahbuba"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOnline"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{chatVM.chatModel.txtOnline}"
+                            style="@style/txtPoppinsregular15_2" tools:text="@string/lbl_online"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageCall"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_call"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_call"/>
+                    <ImageView android:id="@+id/imageVideocamera"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_videocamera"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_videocamera"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYesterday"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{chatVM.chatModel.txtYesterday}"
+                style="@style/txtPoppinsregular10" tools:text="@string/lbl_yesterday"/>
+            <LinearLayout android:id="@+id/linearRowellipsesixtyfiveOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageEllipseSixtyFiveOne"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse65}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse65"/>
+                <LinearLayout android:gravity="end"
+                    android:id="@+id/linearColumntime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnhianneiamf"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylegray_2">
+                        <TextView android:gravity="start"
+                            android:id="@+id/txtHiAnneIamF"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:text="@{chatVM.chatModel.txtHiAnneIamF}"
+                            style="@style/txtPoppinsregular14_1" tools:text="@string/msg_hi_anne_i_am_f"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{chatVM.chatModel.txtTime}"
+                        style="@style/txtPoppinsregular12_2" tools:text="@string/lbl_18_27"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowtimeTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumngroup230"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRowgroup230"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal" style="@style/groupStylegray_600cornerRadius">
+                        <ImageView android:id="@+id/imageGroup230"
+                            android:layout_height="@dimen/_35pxh"
+                            android:layout_width="@dimen/_181pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_group230"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_group230"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTimeOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{chatVM.chatModel.txtTimeOne}"
+                            style="@style/txtNunitoregular16" tools:text="@string/lbl_0_37"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTimeTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{chatVM.chatModel.txtTimeTwo}"
+                        style="@style/txtNunitoregular12" tools:text="@string/lbl_18_27"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageEllipseSixtySix"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse5}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse5"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowellipsesixtyfiveTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageEllipseSixtyFiveTwo"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse65}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse65"/>
+                <LinearLayout android:gravity="end"
+                    android:id="@+id/linearColumntimeThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnhianneiamfOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylegray_2">
+                        <TextView android:gravity="start"
+                            android:id="@+id/txtHiAnneIamFOne"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:text="@{chatVM.chatModel.txtHiAnneIamFOne}"
+                            style="@style/txtPoppinsregular14_1" tools:text="@string/msg_hi_anne_i_am_f"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTimeThree"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{chatVM.chatModel.txtTimeThree}"
+                        style="@style/txtPoppinsregular12_2" tools:text="@string/lbl_18_27"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowhidontworry"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumntimeFour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnhidontworry"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylegray_600cornerRadius">
+                        <TextView android:gravity="start"
+                            android:id="@+id/txtHidontworry"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:text="@{chatVM.chatModel.txtHidontworry}"
+                            style="@style/txtPoppinsregular14_2" tools:text="@string/msg_hi_don_t_worry"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTimeFour"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{chatVM.chatModel.txtTimeFour}"
+                        style="@style/txtNunitoregular12" tools:text="@string/lbl_18_27"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageEllipseSixtySixOne"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse5}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearRowellipsesixtyfiveThree"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageEllipseSixtyFiveThree"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse65}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse65"/>
+                <LinearLayout android:gravity="end"
+                    android:id="@+id/linearColumntimeFive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnhianneiamfTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylegray_2">
+                        <TextView android:gravity="start"
+                            android:id="@+id/txtHiAnneIamFTwo"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_6pxh"
+                            android:text="@{chatVM.chatModel.txtHiAnneIamFTwo}"
+                            style="@style/txtPoppinsregular14_1" tools:text="@string/msg_hi_anne_i_am_f"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTimeFive"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{chatVM.chatModel.txtTimeFive}"
+                        style="@style/txtPoppinsregular12_2" tools:text="@string/lbl_18_27"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowellipsesixtyfiveFour"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageEllipseSixtyFiveFour"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse65}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse65"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMahbubaistypi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{chatVM.chatModel.txtMahbubaistypi}"
+                    style="@style/txtPoppinsregular14_1" tools:text="@string/msg_mahbuba_is_typi"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottombar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <EditText
+                android:background="@drawable/rectangle_bg_black_900_radius_bl_12_br_12"
+                android:drawableEnd="@drawable/img_microphone"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/lbl_type_a_message"
+                android:id="@+id/etGroup1314" android:inputType="text"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_32pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_21pxv"
+                android:singleLine="true"
+                android:text="@={chatVM.chatModel.etGroup1314Value}"
+                android:textColor="@color/white_A700"
+                android:textColorHint="@color/white_A700"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

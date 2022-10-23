@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onbordingTwoVM" type="com.codewaresapplication.app.modules.onbordingtwo.data.viewmodel.OnbordingTwoVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameOnbordingTwo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_1">
+        <ImageView android:id="@+id/imageShade"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_shade_768X375}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shade_768X375"/>
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarAppbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSkip"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{onbordingTwoVM.onbordingTwoModel.txtSkip}"
+                        style="@style/txtPoppinsmedium18_2" tools:text="@string/lbl_skip"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLatestStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{onbordingTwoVM.onbordingTwoModel.txtLatestStyle}"
+                style="@style/txtPoppinsmedium24" tools:text="@string/lbl_latest_style"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_12pxh"
+                android:text="@{onbordingTwoVM.onbordingTwoModel.txtDescription}"
+                style="@style/txtPoppinsregular14_2" tools:text="@string/msg_the_latest_styl"/>
+            <FrameLayout android:gravity="center_horizontal"
+                android:id="@+id/frameGroup1304"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

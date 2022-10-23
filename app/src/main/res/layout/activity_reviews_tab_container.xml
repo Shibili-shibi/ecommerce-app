@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewsTabContainerVM" type="com.codewaresapplication.app.modules.reviewstabcontainer.data.viewmodel.ReviewsTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtReviews"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{reviewsTabContainerVM.reviewsTabContainerModel.txtReviews}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_reviews"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.material.tabs.TabLayout
+            android:gravity="center_horizontal"
+            android:id="@+id/tabLayoutGroup18"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:tabBackground="@drawable/selector_bg_black_900_radius_10"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white_A700"
+            app:tabTextColor="@color/black_900" style="@style/groupStylegray_200cornerRadius"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:gravity="center_horizontal"
+            android:id="@+id/viewPagerTabbarview"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+    </LinearLayout>
+</layout>

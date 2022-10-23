@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewsVM" type="com.codewaresapplication.app.modules.reviews.data.viewmodel.ReviewsVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnfortyeight"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFortyEight"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.12" android:singleLine="true"
+                android:text="@{reviewsVM.reviewsModel.txtFortyEight}"
+                style="@style/txtPoppinssemibold30" tools:text="@string/lbl_4_8"/>
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBarRatingbar"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:numStars="5"
+                android:progressBackgroundTint="@color/amber_500"
+                android:progressTint="@color/amber_500"
+                android:rating="4" style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBasedon1024"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{reviewsVM.reviewsModel.txtBasedon1024}"
+                style="@style/txtPoppinsregular14_1" tools:text="@string/msg_based_on_1_024"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnexcellent"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_5">
+                <LinearLayout android:id="@+id/linearRowexcellent"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylecornerRadius_5">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExcellent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{reviewsVM.reviewsModel.txtExcellent}"
+                        style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_excellent"/>
+                    <ProgressBar android:id="@+id/progressBarGroup1085"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="93"
+                        android:progressDrawable="@drawable/layer_list_radius_2" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowgood"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylecornerRadius_5">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGood"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{reviewsVM.reviewsModel.txtGood}"
+                        style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_good"/>
+                    <ProgressBar android:id="@+id/progressBarGroup1086"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="32"
+                        android:progressDrawable="@drawable/layer_list_radius_3" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowaverage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylecornerRadius_5">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAverage"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{reviewsVM.reviewsModel.txtAverage}"
+                        style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_average"/>
+                    <ProgressBar android:id="@+id/progressBarGroup1087"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="17"
+                        android:progressDrawable="@drawable/layer_list_radius_2" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowbellowaverage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylecornerRadius_5">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBellowAverage"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{reviewsVM.reviewsModel.txtBellowAverage}"
+                        style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_bellow_average"/>
+                    <ProgressBar android:id="@+id/progressBarGroup1088"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="9"
+                        android:progressDrawable="@drawable/layer_list_radius_3" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowpoor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylecornerRadius_5">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPoor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{reviewsVM.reviewsModel.txtPoor}"
+                        style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_poor"/>
+                    <ProgressBar android:id="@+id/progressBarGroup1089"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="4"
+                        android:progressDrawable="@drawable/layer_list_radius_2" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerReviews"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_23pxh}" tools:itemCount="2" tools:listitem="@layout/row_reviews"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_black_900_radius_bl_12_br_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:id="@+id/btnWriteAReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_113pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_write_a_review"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_write_a_review"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpSignInVM" type="com.codewaresapplication.app.modules.signupsignin.data.viewmodel.SignUpSignInVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSignUpSignIn"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_100">
+        <ImageView android:id="@+id/imageUnsplashW7b3eD"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_299pxh"
+            android:layout_width="@dimen/_299pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_unsplashw7b3ed}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashw7b3ed"/>
+        <TextView android:id="@+id/txtDiscoveryourS"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{signUpSignInVM.signUpSignInModel.txtDiscoveryourS}"
+            style="@style/txtPoppinsmedium25" tools:text="@string/msg_discover_your_s"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_11pxh"
+            android:text="@{signUpSignInVM.signUpSignInModel.txtDescription}"
+            style="@style/txtPoppinsregular15_1" tools:text="@string/msg_it_is_a_long_es"/>
+        <LinearLayout android:id="@+id/linearRowregister"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_black_900_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnRegister"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_width="@dimen/_164pxh"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_45pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_register"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_register"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_gray_200_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnSignIn"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_width="@dimen/_163pxh"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_54pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/black_900"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_sign_in"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

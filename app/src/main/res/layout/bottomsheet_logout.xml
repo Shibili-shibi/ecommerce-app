@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="logoutVM" type="com.codewaresapplication.app.modules.logout.data.viewmodel.LogoutVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearLogout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumn"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_7">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnalert"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAlert"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{logoutVM.logoutModel.txtAlert}"
+                    style="@style/txtPoppinsmedium25" tools:text="@string/lbl_alert"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDoyouwantto"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@{logoutVM.logoutModel.txtDoyouwantto}"
+                    style="@style/txtPoppinsregular15_1" tools:text="@string/msg_do_you_want_to"/>
+                <LinearLayout android:id="@+id/linearRowyes"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_black_900_radius_10"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:id="@+id/btnYes"
+                        android:layout_height="@dimen/_52pxv"
+                        android:layout_width="@dimen/_164pxh"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_18pxv"
+                        android:paddingEnd="@dimen/_63pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_18pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_yes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_A700"
+                        android:textFontWeight="500"
+                        android:textSize="@dimen/_16pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_yes"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_gray_200_radius_10"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center" android:id="@+id/btnNo"
+                        android:layout_height="@dimen/_52pxv"
+                        android:layout_width="@dimen/_163pxh"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_18pxv"
+                        android:paddingEnd="@dimen/_70pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_18pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_no"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_900"
+                        android:textFontWeight="500"
+                        android:textSize="@dimen/_16pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_no"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

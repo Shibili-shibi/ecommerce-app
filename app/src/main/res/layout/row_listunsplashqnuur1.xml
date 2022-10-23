@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listunsplashqnuur1RowModel" type="com.codewaresapplication.app.modules.notification.data.model.Listunsplashqnuur1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnunsplashqnuur"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_102cornerRadius">
+        <LinearLayout android:id="@+id/linearRowunsplashqnuur"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius">
+            <ImageView android:id="@+id/imageUnsplashqnUUR"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_unsplashqnuur}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashqnuur"/>
+            <LinearLayout android:id="@+id/linearColumnyoupurchaseds"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="start"
+                    android:id="@+id/txtYoupurchasedS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listunsplashqnuur1RowModel.txtYoupurchasedS}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/msg_you_purchased_s"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_gravity="end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listunsplashqnuur1RowModel.txtTime}"
+                    style="@style/txtPoppinslight14" tools:text="@string/lbl_02_minites_ago"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

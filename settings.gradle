@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "codeware_s_application1"

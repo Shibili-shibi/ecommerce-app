@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="shareVM" type="com.codewaresapplication.app.modules.share.data.viewmodel.ShareVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearShare"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearShareto"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_8">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShareto"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{shareVM.shareModel.txtShareto}"
+                style="@style/txtPoppinsmedium18" tools:text="@string/lbl_share_to"/>
+            <LinearLayout android:id="@+id/linearRowfacebook"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_blue_700_radius_30"
+                    android:id="@+id/btnFacebook"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingHorizontal="@dimen/_18pxh"
+                    android:paddingVertical="@dimen/_18pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_facebook_60X60" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_gradient_s_purple_a700_e_amber_900_radius_30"
+                    android:id="@+id/btnInstagram"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingHorizontal="@dimen/_18pxh"
+                    android:paddingVertical="@dimen/_18pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_facebook_60X60" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_blue_500_radius_30"
+                    android:id="@+id/btnTwitter"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingHorizontal="@dimen/_18pxh"
+                    android:paddingVertical="@dimen/_18pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_facebook_60X60" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowfacebookOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFacebookOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{shareVM.shareModel.txtFacebookOne}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/lbl_facebook"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtInstagramOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{shareVM.shareModel.txtInstagramOne}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/lbl_instagram"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTwitterOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{shareVM.shareModel.txtTwitterOne}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/lbl_twitter"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowwhatsapp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_green_501_radius_30"
+                    android:id="@+id/btnWhatsapp"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingHorizontal="@dimen/_18pxh"
+                    android:paddingVertical="@dimen/_18pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_facebook_60X60" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_light_blue_800_radius_30"
+                    android:id="@+id/btnLinkedin"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingHorizontal="@dimen/_18pxh"
+                    android:paddingVertical="@dimen/_18pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_facebook_60X60" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_red_900_radius_30"
+                    android:id="@+id/btnPinterest"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingHorizontal="@dimen/_18pxh"
+                    android:paddingVertical="@dimen/_18pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_facebook_60X60" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowwhatsappOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWhatsAppOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{shareVM.shareModel.txtWhatsAppOne}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/lbl_whats_app"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLinekedin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{shareVM.shareModel.txtLinekedin}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/lbl_linekedin"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPinterestOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{shareVM.shareModel.txtPinterestOne}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/lbl_pinterest"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

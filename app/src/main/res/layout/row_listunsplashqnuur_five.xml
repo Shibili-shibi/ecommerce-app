@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listunsplashqnuurFiveRowModel" type="com.codewaresapplication.app.modules.search.data.model.ListunsplashqnuurFiveRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowarrowright"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylegray_102cornerRadius">
+        <LinearLayout android:id="@+id/linearRowunsplashqnuurFive"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageUnsplashqnUURFive"
+                android:layout_height="@dimen/_58pxh"
+                android:layout_width="@dimen/_58pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_unsplashqnuur_4}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashqnuur_4"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnpremiumwatch"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPremiumWatch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{listunsplashqnuurFiveRowModel.txtPremiumWatch}"
+                    style="@style/txtPoppinsregular15" tools:text="@string/lbl_premium_watch"/>
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarRatingbar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:progressTint="@color/amber_400"
+                    android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageArrowright"
+            android:layout_height="@dimen/_16pxh"
+            android:layout_width="@dimen/_16pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowright_16X16"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+    </LinearLayout>
+</layout>

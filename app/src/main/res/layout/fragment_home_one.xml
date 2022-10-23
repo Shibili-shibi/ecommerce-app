@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeOneVM" type="com.codewaresapplication.app.modules.homeone.data.viewmodel.HomeOneVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnpopuleritems"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <HorizontalScrollView android:fillViewport="true"
+                android:gravity="start"
+                android:id="@+id/horizontalScrollHorizontalscrollunsplashemlkhd"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:scrollbars="none">
+                <LinearLayout android:id="@+id/linearRowunsplashemlkhd"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnunsplashemlkhd"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <FrameLayout
+                            android:id="@+id/frameStackunsplashemlkhd"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_216pxv" android:layout_width="@dimen/_182pxh">
+                            <ImageView
+                                android:id="@+id/imageUnsplashemlKHD"
+                                android:layout_gravity="start"
+                                android:layout_height="@dimen/_216pxh"
+                                android:layout_width="@dimen/_182pxh"
+                                android:scaleType="fitXY"
+                                cornerRadius="@{@dimen/_15pxh}"
+                                imageRes="@{@drawable/img_unsplashemlkhd}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashemlkhd"/>
+                            <ImageView android:id="@+id/imageHeartThree"
+                                android:layout_gravity="top|end"
+                                android:layout_height="@dimen/_20pxh"
+                                android:layout_width="@dimen/_22pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_heart3"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_heart3"/>
+                        </FrameLayout>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtCasualJeansSh"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homeOneVM.homeOneModel.txtCasualJeansSh}"
+                            style="@style/txtPoppinsregular14" tools:text="@string/msg_casual_jeans_sh"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homeOneVM.homeOneModel.txtPrice}"
+                            style="@style/txtPoppinsmedium16" tools:text="@string/lbl_165_00"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnunsplashstivsl"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <FrameLayout
+                            android:id="@+id/frameStackunsplashstivsl"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_248pxv" android:layout_width="@dimen/_209pxh">
+                            <ImageView
+                                android:id="@+id/imageUnsplashSTiVSl"
+                                android:layout_gravity="start"
+                                android:layout_height="@dimen/_248pxh"
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                cornerRadius="@{@dimen/_15pxh}"
+                                imageRes="@{@drawable/img_unsplashstivsl}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashstivsl"/>
+                            <ImageView
+                                android:id="@+id/imageHeartThreeOne"
+                                android:layout_gravity="top|end"
+                                android:layout_height="@dimen/_20pxh"
+                                android:layout_width="@dimen/_22pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_heart3_20X22"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_heart3_20X22"/>
+                        </FrameLayout>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtCasualJeansShOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homeOneVM.homeOneModel.txtCasualJeansShOne}"
+                            style="@style/txtPoppinsregular14" tools:text="@string/msg_casual_jeans_sh"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPriceOne"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homeOneVM.homeOneModel.txtPriceOne}"
+                            style="@style/txtPoppinsmedium16" tools:text="@string/lbl_165_00"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnunsplashr9ltxk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical" style="@style/groupStylecornerRadius_2">
+                        <ImageView android:id="@+id/imageUnsplashr9lTXK"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_216pxh"
+                            android:layout_width="@dimen/_182pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_15pxh}"
+                            imageRes="@{@drawable/img_unsplashr9ltxk}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashr9ltxk"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtCasualJeansShTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homeOneVM.homeOneModel.txtCasualJeansShTwo}"
+                            style="@style/txtPoppinsregular14" tools:text="@string/msg_casual_jeans_sh"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPriceTwo"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{homeOneVM.homeOneModel.txtPriceTwo}"
+                            style="@style/txtPoppinsmedium16" tools:text="@string/lbl_165_00"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowpopuleritems"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPopulerItems"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{homeOneVM.homeOneModel.txtPopulerItems}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_populer_items"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAll"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{homeOneVM.homeOneModel.txtSeeAll}"
+                    style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="end" android:id="@+id/recyclerHomeOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_home_one"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

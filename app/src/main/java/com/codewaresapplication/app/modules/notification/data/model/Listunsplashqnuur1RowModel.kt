@@ -1,0 +1,19 @@
+package com.codewaresapplication.app.modules.notification.`data`.model
+
+import com.codewaresapplication.app.R
+import com.codewaresapplication.app.appcomponents.di.MyApp
+import kotlin.String
+
+data class Listunsplashqnuur1RowModel(
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtYoupurchasedS: String? =
+      MyApp.getInstance().resources.getString(R.string.msg_you_purchased_s)
+  ,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var txtTime: String? = MyApp.getInstance().resources.getString(R.string.lbl_02_minites_ago)
+
+)

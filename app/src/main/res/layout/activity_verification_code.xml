@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="verificationCodeVM" type="com.codewaresapplication.app.modules.verificationcode.data.viewmodel.VerificationCodeVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearVerificationCo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVerificationCo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{verificationCodeVM.verificationCodeModel.txtVerificationCo}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/msg_verification_co"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnconfirm"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnenterthecode"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtEnterthecode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{verificationCodeVM.verificationCodeModel.txtEnterthecode}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/msg_enter_the_code"/>
+                <LinearLayout android:id="@+id/linearColumndidtreceivea"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylecornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDidtreceivea"
+                        android:layout_gravity="end"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{verificationCodeVM.verificationCodeModel.txtDidtreceivea}"
+                        style="@style/txtPoppinsregular15" tools:text="@string/msg_did_t_receive_a"/>
+                    <LinearLayout android:id="@+id/linearColumnotpview"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylecornerRadius">
+                        <com.mukesh.OtpView
+                            android:focusableInTouchMode="true"
+                            android:id="@+id/otpViewOtpview"
+                            android:inputType="number"
+                            android:itemBackground="@color/gray_201"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black_900"
+                            android:textSize="@dimen/_27pxh"
+                            app:OtpItemCount="5"
+                            app:OtpItemHeight="@dimen/_52pxv"
+                            app:OtpItemSpacing="@dimen/_16pxh"
+                            app:OtpItemWidth="@dimen/_52pxh"
+                            app:OtpLineColor="@android:color/transparent" app:OtpViewType="rectangle"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="end"
+                            android:id="@+id/txtDidtreceiveaOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{verificationCodeVM.verificationCodeModel.txtDidtreceiveaOne}"
+                            style="@style/txtPoppinsregular13" tools:text="@string/msg_did_t_receive_a2"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_black_900_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnConfirm"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_139pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_confirm"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

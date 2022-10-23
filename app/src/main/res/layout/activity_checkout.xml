@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="checkoutVM" type="com.codewaresapplication.app.modules.checkout.data.viewmodel.CheckoutVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearCheckout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCheckout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtCheckout}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_checkout"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDeliveryAddres"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{checkoutVM.checkoutModel.txtDeliveryAddres}"
+            style="@style/txtPoppinsmedium18" tools:text="@string/msg_delivery_addres"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowlocation"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_border_gray_102_radius_15"
+                android:id="@+id/btnLocation"
+                android:layout_height="@dimen/_42pxh"
+                android:layout_width="@dimen/_42pxh"
+                android:paddingHorizontal="@dimen/_9pxh"
+                android:paddingVertical="@dimen/_9pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_location_42X42" tools:ignore="ContentDescription"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnaddress"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtAddress}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/lbl_address"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCountry"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtCountry}"
+                    style="@style/txtPoppinsregular14_3" tools:text="@string/lbl_nsw_australia"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtPaymentMathod"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{checkoutVM.checkoutModel.txtPaymentMathod}"
+            style="@style/txtPoppinsmedium18" tools:text="@string/lbl_payment_mathod"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerCheckout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4" tools:listitem="@layout/row_checkout"/>
+        <LinearLayout android:id="@+id/linearRowtotal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtTotal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{checkoutVM.checkoutModel.txtTotal}"
+                style="@style/txtPoppinsmedium17" tools:text="@string/lbl_total"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{checkoutVM.checkoutModel.txtPrice}"
+                style="@style/txtPoppinsmedium17_1" tools:text="@string/lbl_144_94"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_black_900_radius_bl_12_br_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnPayNow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_137pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_pay_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_pay_now"/>
+    </LinearLayout>
+</layout>

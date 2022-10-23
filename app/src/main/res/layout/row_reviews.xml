@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewsRowModel" type="com.codewaresapplication.app.modules.reviews.data.model.ReviewsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowellipsefive"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageEllipseFive"
+            android:layout_height="@dimen/_33pxh"
+            android:layout_width="@dimen/_33pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse5_33X33}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse5_33X33"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnarianapeter"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearRowarianapeter"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtArianaPeter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{reviewsRowModel.txtArianaPeter}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/lbl_ariana_peter"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.06"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{reviewsRowModel.txtDuration}"
+                    style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_1_day_ago"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBarRatingbarOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:numStars="5"
+                android:progressBackgroundTint="@color/amber_500"
+                android:progressTint="@color/amber_500"
+                android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{reviewsRowModel.txtDescription}"
+                style="@style/txtInterregular14" tools:text="@string/msg_it_is_a_long_es2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

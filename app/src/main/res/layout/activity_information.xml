@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="informationVM" type="com.codewaresapplication.app.modules.information.data.viewmodel.InformationVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearInformation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtInformation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{informationVM.informationModel.txtInformation}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_information"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:id="@+id/frameStackellipsefive"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_92pxv" android:layout_width="@dimen/_92pxh">
+            <ImageView android:id="@+id/imageEllipseFive"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_91pxv"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse5}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse5"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_black_900_border_white_a700_radius_15"
+                android:id="@+id/btnCamera"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_29pxh"
+                android:layout_width="@dimen/_30pxh"
+                android:paddingHorizontal="@dimen/_6pxh"
+                android:paddingVertical="@dimen/_6pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_camera" tools:ignore="ContentDescription"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtAnneChristion"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{informationVM.informationModel.txtAnneChristion}"
+            style="@style/txtPoppinsmedium20" tools:text="@string/lbl_anne_christion"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtEmail"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{informationVM.informationModel.txtEmail}"
+            style="@style/txtPoppinsregular12" tools:text="@string/msg_annechristion_g"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumn"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnaccountname"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAccountName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{informationVM.informationModel.txtAccountName}"
+                    style="@style/txtPoppinsmedium15" tools:text="@string/lbl_account_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_gray_201_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_anne_christion"
+                    android:id="@+id/etGroup969"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_220pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@={informationVM.informationModel.etGroup969Value}"
+                    android:textColor="@color/gray_500"
+                    android:textColorHint="@color/gray_500"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumndateofbirth"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDateofBirth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{informationVM.informationModel.txtDateofBirth}"
+                    style="@style/txtPoppinsmedium15" tools:text="@string/lbl_date_of_birth"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_gray_201_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_11_01_1997"
+                    android:id="@+id/etDate" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_256pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@={informationVM.informationModel.etDateValue}"
+                    android:textColor="@color/gray_500"
+                    android:textColorHint="@color/gray_500"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnaddress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{informationVM.informationModel.txtAddress}"
+                    style="@style/txtPoppinsmedium15" tools:text="@string/lbl_address"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_gray_201_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/msg_new_south_wales"
+                    android:id="@+id/etCountry" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_132pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@={informationVM.informationModel.etCountryValue}"
+                    android:textColor="@color/gray_500"
+                    android:textColorHint="@color/gray_500"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnmobilenumber"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMobileNumber"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{informationVM.informationModel.txtMobileNumber}"
+                    style="@style/txtPoppinsmedium15" tools:text="@string/lbl_mobile_number"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_gray_201_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_9999_999_999"
+                    android:id="@+id/etGroup975"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_227pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@={informationVM.informationModel.etGroup975Value}"
+                    android:textColor="@color/gray_500"
+                    android:textColorHint="@color/gray_500"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_15pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_black_900_radius_10"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnComplete"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_132pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_complete"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_complete"/>
+    </LinearLayout>
+</layout>

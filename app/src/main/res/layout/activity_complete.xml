@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="completeVM" type="com.codewaresapplication.app.modules.complete.data.viewmodel.CompleteVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearComplete"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageCheckmark"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_97pxh"
+            android:layout_width="@dimen/_87pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_checkmark"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtOrderCompleted"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_12pxh"
+            android:text="@{completeVM.completeModel.txtOrderCompleted}"
+            style="@style/txtPoppinsregular18" tools:text="@string/msg_order_completed"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_black_900_radius_bl_12_br_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnMyOrders"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_131pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_my_orders"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_my_orders"/>
+    </LinearLayout>
+</layout>

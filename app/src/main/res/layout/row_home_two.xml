@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeTwoRowModel" type="com.codewaresapplication.app.modules.hometwo.data.model.HomeTwoRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnunsplashzhh3wm"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameStackunsplashzhh3wm"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_192pxv" android:layout_width="@dimen/_164pxh">
+            <ImageView android:id="@+id/imageUnsplashZhh3WM"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_192pxh"
+                android:layout_width="@dimen/_164pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_unsplashzhh3wm_192X164}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashzhh3wm_192X164"/>
+            <ImageView android:id="@+id/imageHeartThreeTwo"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_heart3_20X22"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_heart3_20X22"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:gravity="start"
+            android:id="@+id/txtBlackJacket"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{homeTwoRowModel.txtBlackJacket}"
+            style="@style/txtPoppinsregular14" tools:text="@string/lbl_black_jacket"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtPriceThree"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{homeTwoRowModel.txtPriceThree}"
+            style="@style/txtPoppinsmedium16" tools:text="@string/lbl_246_00"/>
+    </LinearLayout>
+</layout>

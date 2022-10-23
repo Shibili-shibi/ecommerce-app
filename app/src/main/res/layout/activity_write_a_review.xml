@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="writeAReviewVM" type="com.codewaresapplication.app.modules.writeareview.data.viewmodel.WriteAReviewVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearWriteareview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWriteaReview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{writeAReviewVM.writeAReviewModel.txtWriteaReview}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_write_a_review"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowunsplashifnycb"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius_3">
+            <ImageView android:id="@+id/imageUnsplashIfNYCB"
+                android:layout_height="@dimen/_135pxh"
+                android:layout_width="@dimen/_142pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_12pxh}"
+                imageRes="@{@drawable/img_unsplashifnycb_135X142}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashifnycb_135X142"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnjacket"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtJacket"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{writeAReviewVM.writeAReviewModel.txtJacket}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_jacket"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBlackJacket"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{writeAReviewVM.writeAReviewModel.txtBlackJacket}"
+                    style="@style/txtPoppinsregular15" tools:text="@string/lbl_black_jacket"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSizeXL"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{writeAReviewVM.writeAReviewModel.txtSizeXL}"
+                    style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_size_xl"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{writeAReviewVM.writeAReviewModel.txtPrice}"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/lbl_134_98"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtAddPhotoorVi"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{writeAReviewVM.writeAReviewModel.txtAddPhotoorVi}"
+            style="@style/txtPoppinsmedium18" tools:text="@string/msg_add_photo_or_vi"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnupload"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_5">
+            <ImageView android:id="@+id/imageUpload"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_upload"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_upload"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClickheretou"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{writeAReviewVM.writeAReviewModel.txtClickheretou}"
+                style="@style/txtInterregular15" tools:text="@string/msg_click_here_to_u"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearWriteaReview"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_6">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWriteyorRevie"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{writeAReviewVM.writeAReviewModel.txtWriteyorRevie}"
+                style="@style/txtPoppinsmedium18" tools:text="@string/msg_write_yor_revie"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_white_a700_border_gray_204_radius_16"
+                android:fontFamily="@font/inter"
+                android:hint="@string/msg_would_you_like"
+                android:id="@+id/etGroup1123" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_21pxh"
+                android:paddingStart="@dimen/_21pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@={writeAReviewVM.writeAReviewModel.etGroup1123Value}"
+                android:textColor="@color/gray_500"
+                android:textColorHint="@color/gray_500"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txt350characters"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{writeAReviewVM.writeAReviewModel.txt350characters}"
+                style="@style/txtInterregular14" tools:text="@string/msg_350_characters"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_black_900_radius_bl_12_br_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:id="@+id/btnWriteAReviewOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_113pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_write_a_review"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_write_a_review"/>
+    </LinearLayout>
+</layout>
