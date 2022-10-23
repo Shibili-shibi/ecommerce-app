@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingsVM" type="com.codewaresapplication.app.modules.settings.data.viewmodel.SettingsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSettings"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtSettings}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_settings"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearRowarrowright"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_102cornerRadius">
+            <LinearLayout android:id="@+id/linearRowgroup1311"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameGroup1311"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnannechristion"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAnneChristion"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtAnneChristion}"
+                        style="@style/txtPoppinsregular18_1" tools:text="@string/lbl_anne_christion"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPremiumUser"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtPremiumUser}"
+                        style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_premium_user"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowright"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright_16X16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtSettingsOne"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{settingsVM.settingsModel.txtSettingsOne}"
+            style="@style/txtPoppinsmedium18" tools:text="@string/lbl_settings"/>
+        <LinearLayout android:id="@+id/linearRowarrowrightOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRowuser"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageUser"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_24X24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_24X24"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPersonalData"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtPersonalData}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_personal_data"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightOne"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright_16X16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowcamera"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRownotification"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageNotification"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_notification_24X24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_notification_24X24"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNotifications"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtNotifications}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_notifications"/>
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialCamera"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowarrowrightTwo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRowtimeline"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageTimeline"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_timeline"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_timeline"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTrackingOrder"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtTrackingOrder}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_tracking_order"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightTwo"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright_16X16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowarrowrightThree"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRowclock"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageClock"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_clock_24X24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_clock_24X24"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrderStatus"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtOrderStatus}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_order_status"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightThree"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright_16X16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowarrowrightFour"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRowminimize"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMinimize"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_minimize"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_minimize"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtLanguage}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_language"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightFour"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright_16X16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowarrowrightFive"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRowcomputer"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageComputer"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_computer_24X24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_computer_24X24"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFAQs"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtFAQs}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_faqs"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightFive"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright_16X16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright_16X16"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

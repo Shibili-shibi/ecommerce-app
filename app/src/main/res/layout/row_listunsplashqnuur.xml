@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listunsplashqnuurRowModel" type="com.codewaresapplication.app.modules.search.data.model.ListunsplashqnuurRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageUnsplashqnUUR"
+        android:layout_height="@dimen/_58pxv"
+        android:layout_width="@dimen/_58pxh" android:scaleType="fitXY"
+        cornerRadius="@{@dimen/_10pxh}"
+        imageRes="@{@drawable/img_unsplashqnuur}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashqnuur"/>
+</layout>

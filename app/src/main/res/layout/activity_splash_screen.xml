@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashScreenVM" type="com.codewaresapplication.app.modules.splashscreen.data.viewmodel.SplashScreenVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSplashScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_100">
+        <ImageView android:id="@+id/imageBagEleven"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_191pxh"
+            android:layout_width="@dimen/_191pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_bag11"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_bag11"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtFashionista"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{splashScreenVM.splashScreenModel.txtFashionista}"
+            style="@style/txtQuicksandregular32" tools:text="@string/lbl_fashionista"/>
+    </LinearLayout>
+</layout>

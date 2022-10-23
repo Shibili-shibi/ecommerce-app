@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="productViewVM" type="com.codewaresapplication.app.modules.productview.data.viewmodel.ProductViewVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameProductView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageProduct"
+            android:layout_gravity="top|start"
+            android:layout_height="@dimen/_523pxv"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_product}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_product"/>
+        <LinearLayout android:id="@+id/linearColumnshare"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_2">
+            <ImageButton
+                android:background="@drawable/rectangle_border_gray_102_radius_15"
+                android:id="@+id/btnShare" android:layout_gravity="end"
+                android:layout_height="@dimen/_42pxh"
+                android:layout_width="@dimen/_42pxh"
+                android:paddingHorizontal="@dimen/_9pxh"
+                android:paddingVertical="@dimen/_9pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_share" tools:ignore="ContentDescription"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearOrderStatus"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrderStatus"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{productViewVM.productViewModel.txtOrderStatus}"
+                    style="@style/txtPoppinsmedium20" tools:text="@string/lbl_order_status"/>
+                <LinearLayout android:id="@+id/linearRowgroup1319"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroup1319"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_18pxh"
+                        android:paddingStart="@dimen/_19pxh"
+                        android:paddingTop="@dimen/_17pxv"
+                        android:singleLine="true"
+                        android:text="@{productViewVM.productViewModel.txtGroup1319}"
+                        style="@style/txtRoundedOutline" tools:text="@string/lbl_s"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroup1318"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_17pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:singleLine="true"
+                        android:text="@{productViewVM.productViewModel.txtGroup1318}"
+                        style="@style/txtRoundedOutline" tools:text="@string/lbl_m"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroup1317"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_19pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:singleLine="true"
+                        android:text="@{productViewVM.productViewModel.txtGroup1317}"
+                        style="@style/txtRoundedOutline" tools:text="@string/lbl_l"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroup1320"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_14pxh"
+                        android:paddingStart="@dimen/_15pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:singleLine="true"
+                        android:text="@{productViewVM.productViewModel.txtGroup1320}"
+                        style="@style/txtSolidRounded_2" tools:text="@string/lbl_xl"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroup1321"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_16pxv"
+                        android:singleLine="true"
+                        android:text="@{productViewVM.productViewModel.txtGroup1321}"
+                        style="@style/txtRoundedOutline" tools:text="@string/lbl_xxl"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColor"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_4">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtColor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{productViewVM.productViewModel.txtColor}"
+                    style="@style/txtPoppinsmedium20" tools:text="@string/lbl_color"/>
+                <LinearLayout android:id="@+id/linearRowrectangle1119"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_900_border_deep_purple_a200_radius_8"
+                        android:id="@+id/viewRectangle1119"
+                        android:layout_height="@dimen/_30pxh" android:layout_width="@dimen/_30pxh"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_red_a700_radius_8"
+                        android:id="@+id/viewRectangle1120"
+                        android:layout_height="@dimen/_30pxh" android:layout_width="@dimen/_30pxh"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_400_radius_8"
+                        android:id="@+id/viewRectangle1121"
+                        android:layout_height="@dimen/_30pxh" android:layout_width="@dimen/_30pxh"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_red_100_radius_8"
+                        android:id="@+id/viewRectangle1122"
+                        android:layout_height="@dimen/_30pxh" android:layout_width="@dimen/_30pxh"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAddtoCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{productViewVM.productViewModel.txtPrice}"
+                    style="@style/txtPoppinssemibold22" tools:text="@string/lbl_134_98"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_black_900_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:id="@+id/btnAddToCard"
+                    android:layout_height="@dimen/_57pxv"
+                    android:layout_width="@dimen/_173pxh"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_36pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_add_to_card"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_A700"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_add_to_card"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

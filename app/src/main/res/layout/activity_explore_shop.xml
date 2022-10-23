@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreShopVM" type="com.codewaresapplication.app.modules.exploreshop.data.viewmodel.ExploreShopVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearExploreShop"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_101">
+        <TextView android:id="@+id/txtWhatproductsy"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_9pxh"
+            android:text="@{exploreShopVM.exploreShopModel.txtWhatproductsy}"
+            style="@style/txtPoppinsmedium30" tools:text="@string/msg_what_products_y"/>
+        <TextView android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_12pxh"
+            android:text="@{exploreShopVM.exploreShopModel.txtDescription}"
+            style="@style/txtPoppinsregular16" tools:text="@string/msg_choose_which_yo"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerExploreShop"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_12pxh}" tools:itemCount="7" tools:listitem="@layout/row_explore_shop"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_black_900_radius_bl_12_br_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnExploreShop"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_120pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_explore_shop"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_explore_shop"/>
+    </LinearLayout>
+</layout>
